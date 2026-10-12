@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DJ Personal Collection Museum — 一座持续生长的艺术、物件与记忆档案。" />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>DJ · Personal Collection Museum</title>
+  <script>
+    const onGitHubPages = location.hostname.endsWith('github.io');
+    window.__SITE_BASE__ = onGitHubPages ? `/${location.pathname.split('/').filter(Boolean)[0]}/` : '/';
+    document.write(`<base href="${window.__SITE_BASE__}">`);
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <header class="site-header" id="header">
+    <a class="brand" href="/" aria-label="返回首页"><span>DJ</span><small>PRIVATE MUSEUM</small></a>
+    <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false"><i></i><i></i></button>
+    <nav class="nav" aria-label="主导航">
+      <a href="/">HOME <em>首页</em></a>
+      <a href="/collection/">COLLECTION <em>藏品</em></a>
+      <a href="/artists/">ARTISTS <em>艺术家</em></a>
+      <a href="/exhibitions/">EXHIBITIONS <em>展览</em></a>
+      <a href="/journal/">JOURNAL <em>收藏日志</em></a>
+      <a href="/about/">ABOUT <em>关于</em></a>
+    </nav>
+    <button class="search-trigger" aria-label="全站搜索">⌕</button>
+  </header>
+  <main id="main"></main>
+  <footer class="footer">
+    <div><div class="footer-mark">DJ</div><p>An evolving archive of art,<br>objects and memories.</p></div>
+    <div class="footer-nav"><a href="/collection/">Collection</a><a href="/artists/">Artists</a><a href="/exhibitions/">Exhibitions</a><a href="/journal/">Journal</a><a href="/about/">About</a></div>
+    <div class="footer-meta"><p>PRIVATE COLLECTION · DEMO ARCHIVE</p><button onclick="scrollTo({top:0,behavior:'smooth'})">BACK TO TOP ↑</button><small>© 2026 DJ PERSONAL COLLECTION MUSEUM</small></div>
+  </footer>
+  <div class="search-panel" aria-hidden="true"><button class="panel-close" aria-label="关闭搜索">×</button><label>SEARCH THE ARCHIVE<input id="global-search" type="search" placeholder="作品、艺术家、媒介…" autocomplete="off"></label><div id="global-results"></div></div>
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="作品大图"><button class="lightbox-close" aria-label="关闭">×</button><img alt=""><p></p></div>
+  <script src="app.js"></script>
+</body>
+</html>
+
